@@ -16,4 +16,4 @@ Leap of Faith
 ### Foundational Problems
 |  #  | Title           |  Solution       |  Time           | Space           | Difficulty    | Tag          | Note| 
 |-----|---------------- | --------------- | --------------- | --------------- | ------------- |--------------|-----|
-0 | [Head and Tail Recursion]() | []()    |      |        |        |||
+0 | [Head and Tail Recursion]() | [Notes](./Recursion/1HeadandTailRecursion.pdf)    |      |        |        |||
