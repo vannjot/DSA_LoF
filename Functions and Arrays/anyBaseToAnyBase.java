@@ -5,19 +5,30 @@ public class anyBaseToAnyBase {
         int n = scn.nextInt();
         int sourceBase = scn.nextInt();
         int destBase = scn.nextInt();
-        int d = anyBase(n, sourceBase, destBase);
-        System.out.println(d);
+        int d = anybasetodecimal(n, sourceBase);
+        int rv = decimaltoanybase(d, destBase);
+        System.out.println(rv);
     }
-
-    public static int anyBase(int n, int source, int dest){
+    public static int anybasetodecimal(int n, int b) {
         int rv = 0;
-        int p = 1;
+        int p = 0;
         while(n > 0){
-            int dig = n % dest;
-            rv += dig * p;
-            p = p * source;
-            n /= dest;
+            rv += n%10 * Math.pow(b, p);
+            n /= 10;
+            ++p;
         }
         return rv;
     }
+    public static int decimaltoanybase(int n, int b) {
+        int rv = 0;
+        int count = 0;
+        while (n > 0){
+            rv += (n % b) * Math.pow(10, count);
+            ++count;
+            n /= b;
+        }
+        return rv;
+    }
+
+    
 }
